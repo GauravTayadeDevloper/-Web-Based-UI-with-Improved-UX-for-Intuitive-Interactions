@@ -46,7 +46,7 @@ export default function FpsScene() {
     // 1️⃣ BASIC SETUP
     var textureLoader = new THREE.TextureLoader();
     var groundGeometry = new THREE.PlaneGeometry(50, 50);
-    const textureg1 = textureLoader.load("/textures/path.jpg");
+    const textureg1 = textureLoader.load("textures/path.jpg");
     var groundMaterial = new THREE.MeshBasicMaterial({ map: textureg1 });
     var ground = new THREE.Mesh(groundGeometry, groundMaterial);
     ground.position.set(0, -1, 0);
@@ -54,7 +54,7 @@ export default function FpsScene() {
     scene.add(ground);
 
     var boxGeometry1 = new THREE.BoxGeometry(30, 1, 30);
-    const textureg = textureLoader.load("/textures/path.jpg");
+    const textureg = textureLoader.load("textures/path.jpg");
     var boxMaterial1 = new THREE.MeshBasicMaterial({ map: textureg });
     var box1 = new THREE.Mesh(boxGeometry1, boxMaterial1);
     box1.position.set(0, -0.5, -3);
@@ -70,8 +70,8 @@ export default function FpsScene() {
       mesh.add(line);
     }
     function groundfloorleft() {
-      const texture = textureLoader.load("/textures/gwall.jpg");
-      const texture1 = textureLoader.load("/textures/wall.jpg");
+      const texture = textureLoader.load("textures/gwall.jpg");
+      const texture1 = textureLoader.load("textures/wall.jpg");
       var boxGeometry1 = new THREE.BoxGeometry(17.99, 3.99, 9.99);
       var boxMaterial1 = new THREE.MeshBasicMaterial({ map: texture1 });
       var box1 = new THREE.Mesh(boxGeometry1, boxMaterial1);
@@ -128,8 +128,8 @@ export default function FpsScene() {
 
     function groundfloorright() {
       const textureLoader = new THREE.TextureLoader();
-      const texture = textureLoader.load("/textures/gwall.jpg");
-      const texture1 = textureLoader.load("/textures/wall.jpg");
+      const texture = textureLoader.load("textures/gwall.jpg");
+      const texture1 = textureLoader.load("textures/wall.jpg");
       var boxGeometry1 = new THREE.BoxGeometry(9.99, 3.99, 25.001);
       const boxMaterial1 = [
         new THREE.MeshStandardMaterial({ map: texture1 }), // Right face
@@ -297,12 +297,12 @@ export default function FpsScene() {
 
       scene.add(sp);
     }
-    const texture1 = textureLoader.load("/textures/wall.jpg");
+    const texture1 = textureLoader.load("textures/wall.jpg");
     function firstfloorleft() {
       const textureLoader = new THREE.TextureLoader();
-      const texture = textureLoader.load("/textures/gwall.jpg");
-      const texture1 = textureLoader.load("/textures/wall.jpg");
-      const texture11 = textureLoader.load("/textures/path1.jpg");
+      const texture = textureLoader.load("textures/gwall.jpg");
+      const texture1 = textureLoader.load("textures/wall.jpg");
+      const texture11 = textureLoader.load("textures/path1.jpg");
       var boxGeometry1 = new THREE.BoxGeometry(18.0, 0.01, 10);
       var boxMaterial1 = new THREE.MeshBasicMaterial({ map: texture11 });
       var box1 = new THREE.Mesh(boxGeometry1, boxMaterial1);
@@ -347,9 +347,9 @@ export default function FpsScene() {
 
     function firstfloorright() {
       const textureLoader = new THREE.TextureLoader();
-      const texture = textureLoader.load("/textures/gwall.jpg");
-      const texture1 = textureLoader.load("/textures/wall.jpg");
-      const texture11 = textureLoader.load("/textures/path1.jpg");
+      const texture = textureLoader.load("textures/gwall.jpg");
+      const texture1 = textureLoader.load("textures/wall.jpg");
+      const texture11 = textureLoader.load("textures/path1.jpg");
       var boxGeometry1 = new THREE.BoxGeometry(4.0, 0.1, 25.01);
       var boxMaterial1 = new THREE.MeshBasicMaterial({ map: texture11 });
       var box1 = new THREE.Mesh(boxGeometry1, boxMaterial1);
@@ -430,8 +430,8 @@ export default function FpsScene() {
 
     function walls() {
       const textureLoader = new THREE.TextureLoader();
-      const texture = textureLoader.load("/textures/stonew.jpg");
-      const texture1 = textureLoader.load("/textures/wall.jpg");
+      const texture = textureLoader.load("textures/stonew.jpg");
+      const texture1 = textureLoader.load("textures/wall.jpg");
 
       //compound walls
       var spg = new THREE.BoxGeometry(50, 4, 0.08);
@@ -547,7 +547,7 @@ export default function FpsScene() {
 
     function doorsff() {
       const textureLoader = new THREE.TextureLoader();
-      const texture = textureLoader.load("/textures/door.png");
+      const texture = textureLoader.load("textures/door.png");
 
       var boxMaterial21 = new THREE.MeshBasicMaterial({ map: texture });
       var boxGeometry21 = new THREE.BoxGeometry(1.5, 3, 0.1);
@@ -609,8 +609,8 @@ export default function FpsScene() {
     doorsff();
     function windowsff() {
       const textureLoader = new THREE.TextureLoader();
-      const texture = textureLoader.load("/textures/window.png");
-      const texture1 = textureLoader.load("/textures/door.png");
+      const texture = textureLoader.load("textures/window.png");
+      const texture1 = textureLoader.load("textures/door.png");
       var boxMaterial2 = new THREE.MeshBasicMaterial({ map: texture1 });
       var boxGeometry2 = new THREE.BoxGeometry(3, 3, 0.1);
       var box20 = new THREE.Mesh(boxGeometry2, boxMaterial2);
@@ -757,7 +757,7 @@ export default function FpsScene() {
     }
     function doorssf() {
       const textureLoader = new THREE.TextureLoader();
-      const texture1 = textureLoader.load("/textures/door.png");
+      const texture1 = textureLoader.load("textures/door.png");
 
       var boxMaterial2 = new THREE.MeshBasicMaterial({ map: texture1 });
 
@@ -854,7 +854,7 @@ export default function FpsScene() {
     doorssf();
     function windowssf() {
       const textureLoader = new THREE.TextureLoader();
-      const texture1 = textureLoader.load("/textures/window.png");
+      const texture1 = textureLoader.load("textures/window.png");
 
       var boxMaterial2 = new THREE.MeshBasicMaterial({ map: texture1 });
 
@@ -966,7 +966,7 @@ export default function FpsScene() {
 
     function stairs1() {
       const textureLoader = new THREE.TextureLoader();
-      const stairtex = textureLoader.load("/textures/stair.jpg");
+      const stairtex = textureLoader.load("textures/stair.jpg");
       var stepWidth = 0.98; // Width of each step
       var stepHeight = 0.4; // Height of each step
       var stepDepth = 1; // Depth of each step
@@ -993,7 +993,7 @@ export default function FpsScene() {
 
     function stairs2() {
       const textureLoader = new THREE.TextureLoader();
-      const stairtex = textureLoader.load("/textures/stair.jpg");
+      const stairtex = textureLoader.load("textures/stair.jpg");
       var stepWidth = 0.98; // Width of each step
       var stepHeight = 0.4; // Height of each step
       var stepDepth = 1; // Depth of each step
@@ -1021,7 +1021,7 @@ export default function FpsScene() {
 
     function stairs11() {
       const textureLoader = new THREE.TextureLoader();
-      const stairtex = textureLoader.load("/textures/stair.jpg");
+      const stairtex = textureLoader.load("textures/stair.jpg");
       var stepWidth = 0.98; // Width of each step
       var stepHeight = 0.4; // Height of each step
       var stepDepth = 1; // Depth of each step
@@ -1048,7 +1048,7 @@ export default function FpsScene() {
 
     function stairs22() {
       const textureLoader = new THREE.TextureLoader();
-      const stairtex = textureLoader.load("/textures/stair.jpg");
+      const stairtex = textureLoader.load("textures/stair.jpg");
       var stepWidth = 0.98; // Width of each step
       var stepHeight = 0.4; // Height of each step
       var stepDepth = 1; // Depth of each step
@@ -1076,7 +1076,7 @@ export default function FpsScene() {
 
     function stairs10() {
       const textureLoader = new THREE.TextureLoader();
-      const stairtex = textureLoader.load("/textures/stair.jpg");
+      const stairtex = textureLoader.load("textures/stair.jpg");
       var stepWidth = 0.98; // Width of each step
       var stepHeight = 0.4; // Height of each step
       var stepDepth = 1; // Depth of each step
@@ -1103,7 +1103,7 @@ export default function FpsScene() {
 
     function stairs20() {
       const textureLoader = new THREE.TextureLoader();
-      const stairtex = textureLoader.load("/textures/stair.jpg");
+      const stairtex = textureLoader.load("textures/stair.jpg");
       var stepWidth = 0.98; // Width of each step
       var stepHeight = 0.4; // Height of each step
       var stepDepth = 1; // Depth of each step
@@ -1131,7 +1131,7 @@ export default function FpsScene() {
 
     function stairs110() {
       const textureLoader = new THREE.TextureLoader();
-      const stairtex = textureLoader.load("/textures/stair.jpg");
+      const stairtex = textureLoader.load("textures/stair.jpg");
       var stepWidth = 0.98; // Width of each step
       var stepHeight = 0.4; // Height of each step
       var stepDepth = 1; // Depth of each step
@@ -1158,7 +1158,7 @@ export default function FpsScene() {
 
     function stairs220() {
       const textureLoader = new THREE.TextureLoader();
-      const stairtex = textureLoader.load("/textures/stair.jpg");
+      const stairtex = textureLoader.load("textures/stair.jpg");
       var stepWidth = 0.98; // Width of each step
       var stepHeight = 0.4; // Height of each step
       var stepDepth = 1; // Depth of each step
@@ -1187,7 +1187,7 @@ export default function FpsScene() {
     function stairsm() {
       const textureLoader = new THREE.TextureLoader();
       var boxGeometry1 = new THREE.BoxGeometry(3, 1, 0.5);
-      const stairtex = textureLoader.load("/textures/stair.jpg");
+      const stairtex = textureLoader.load("textures/stair.jpg");
       var boxMaterial1 = new THREE.MeshBasicMaterial({ map: stairtex });
       var box1 = new THREE.Mesh(boxGeometry1, boxMaterial1);
       box1.position.set(5, -0.5, 12.25);
