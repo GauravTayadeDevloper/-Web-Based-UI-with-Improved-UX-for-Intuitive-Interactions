@@ -1,20 +1,56 @@
 import { Route, Routes } from "react-router-dom";
+import React, { Suspense } from "react";
 import Header from "./Header";
-import TexturedScene from "./components/TexturedScene";
-import FpsScene from "./components/FpsScene";
-import SkeletonScene from "./components/SkeletonScene";
+import RouteLoader from "./components/RouteLoader";
+import "./App.css";
+
+import Home from "./components/Home";
+
+const SkeletonScene = React.lazy(() => import("./components/SkeletonScene"));
+const TexturedScene = React.lazy(() => import("./components/TexturedScene"));
+const FpsScene = React.lazy(() => import("./components/FpsScene"));
 
 export default function App() {
   return (
     <>
       <Header />
 
-      <Routes >
-        <Route path="/texture" element={<TexturedScene/>} />
-        <Route path="/fps" element={<FpsScene/>}/>
-        <Route path="/" element={<SkeletonScene/>}/>
+      <main className="scene-wrapper">
+        <Suspense fallback={null}>
+          <RouteLoader>
+            <Routes>
+              {/* Home page → scrollable, no loader */}
+              <Route path="/" element={<Home />} />
 
-      </Routes>
+              {/* 3D scenes → loader + no scroll */}
+              <Route
+                path="/skeleton"
+                element={
+                  <div className="scene-container">
+                    <SkeletonScene />
+                  </div>
+                }
+              />
+              <Route
+                path="/texture"
+                element={
+                  <div className="scene-container">
+                    <TexturedScene />
+                  </div>
+                }
+              />
+              <Route
+                path="/fps"
+                element={
+                  <div className="scene-container">
+                    <FpsScene />
+                  </div>
+                }
+              />
+            </Routes>
+          </RouteLoader>
+        </Suspense>
+      </main>
     </>
   );
 }

@@ -1,0 +1,30 @@
+:root {
+  --bg-main: #0b0f1a;
+  --bg-header: #0f172a;
+  --bg-loader: #0b0f1a;
+  --text-primary: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #38bdf8;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Wrapper under header */
+.scene-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background: var(--bg-main);
+}
+
+/* Only 3D scenes block scrolling */
+.scene-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

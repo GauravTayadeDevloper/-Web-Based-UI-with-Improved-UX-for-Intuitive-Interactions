@@ -1,40 +1,41 @@
-
 .minimal-header {
   width: 100%;
-  padding: 18px 0;
-  border-bottom: 1px solid #e3e3e3;
-  background: #023e8a;
+  height: 50px; /* compact header */
+  background: #023047;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
   position: sticky;
   top: 0;
   z-index: 10;
-  color: aliceblue;
-}
-
-/* Inner layout */
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
 
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-
   align-items: center;
-  text-align: center;
+}
+
+/* Inner layout — ROW now */
+.header-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Title */
 .site-title {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 600;
-  
+  color: aliceblue;
+  white-space: nowrap;
 }
 
 /* Navbar layout */
 .nav {
   display: flex;
-  gap: 32px;
+  gap: 20px;
 }
 
 /* Nav item */
@@ -42,15 +43,14 @@
   position: relative;
   text-decoration: none;
   color: #fefae0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
   transition: color 0.2s ease;
 }
 
-/* Hover color */
 .nav-item:hover {
-  color: #000;
+  color: #ffffff;
 }
 
 /* Thin underline animation */
@@ -59,11 +59,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
-
   width: 0%;
   height: 2px;
-  background: #000;
-
+  background: #ffffff;
   transition: width 0.25s ease;
 }
 
@@ -74,14 +72,14 @@
 /* Mobile */
 @media (max-width: 768px) {
   .site-title {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
   }
 
   .nav {
-    gap: 18px;
+    gap: 12px;
   }
 
   .nav-item {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }

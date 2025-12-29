@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
+import Navbar from "./Navbar";
 
 export default function Header() {
   return (
@@ -9,12 +10,7 @@ export default function Header() {
         <h1 className="site-title">
           Web-Based UI with Improved UX for Intuitive Interactions
         </h1>
-
-        <nav className="nav">
-          <Link to="/" className="nav-item">Skeleton View</Link>
-          <Link to="/texture" className="nav-item">Textured View</Link>
-          <Link to="/fps" className="nav-item">FPS View</Link>
-        </nav>
+        <Navbar/>
         
       </div>
     </header>
