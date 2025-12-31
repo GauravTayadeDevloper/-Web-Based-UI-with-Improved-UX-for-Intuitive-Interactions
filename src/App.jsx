@@ -19,10 +19,8 @@ export default function App() {
         <Suspense fallback={null}>
           <RouteLoader>
             <Routes>
-              {/* Home page → scrollable, no loader */}
               <Route path="/" element={<Home />} />
 
-              {/* 3D scenes → loader + no scroll */}
               <Route
                 path="/skeleton"
                 element={
