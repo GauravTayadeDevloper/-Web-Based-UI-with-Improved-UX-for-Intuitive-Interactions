@@ -66,3 +66,127 @@
   color: var(--accent);
   text-decoration: none;
 }
+/* =========================
+   HEADER BASE
+========================= */
+.minimal-header {
+  width: 100%;
+  height: 50px; /* compact on desktop */
+  background: #023047;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   HEADER INNER LAYOUT
+========================= */
+.header-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+   TITLE
+========================= */
+.site-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: aliceblue;
+  white-space: nowrap;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Nav item */
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: #fefae0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+/* Hover */
+.nav-item:hover {
+  color: #ffffff;
+}
+
+/* Underline animation */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.25s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   TABLET (≤768px)
+========================= */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 0.85rem;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  .nav-item {
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================
+   MOBILE (≤600px)
+========================= */
+@media (max-width: 600px) {
+  /* Allow header to grow when nav wraps */
+  .minimal-header {
+    height: auto;
+    padding: 6px 0;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 8px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-item {
+    font-size: 0.8rem;
+  }
+}

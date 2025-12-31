@@ -83,3 +83,18 @@
     font-size: 0.8rem;
   }
 }
+@media (max-width: 600px) {
+  .header-inner {
+    padding: 0 8px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .nav-item {
+    font-size: 0.8rem;
+  }
+}
